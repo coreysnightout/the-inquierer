@@ -12,12 +12,25 @@
   src:url('../fonts/Cambria-Bold-Italic.ttf')
 }
 
+@font-face {
+  font-family: basker;
+  src:url('../fonts/LibreBaskerville-Bold.otf');
+}
+
 body {
   background-color: #e6e6e6;
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 30px;
 }
 
+#head {
+  display: none;
+}
+
+#logo {
+  display: none;
+}
 .clearfix:after {
   display: table;
   content: "";
@@ -52,10 +65,11 @@ ul {
   margin: 0 4px;
 }
 
-#logo img {
+#header img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 15px;
 }
 
 .content {
@@ -78,4 +92,117 @@ ul {
 .figure img {
   width: 100%;
   display: block;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 1px black;
+}
+
+h2 {
+  margin-top: 15px;
+  text-align: center;
+}
+p {
+  line-height: 1.4;
+  margin-top: -15px;
+  font-size: 17px;
+}
+
+.people h2 {
+  text-align: center;
+  font-family: Cambria;
+}
+
+#border {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: .2em;
+  margin: 20px 0 20px;
+}
+#border span {
+  padding: 0 10px;
+  background: #e6e6e4;
+}
+
+#border .bask {
+  font-family: basker;
+}
+
+.figure .figcaption {
+  line-height: .5;
+  margin: 0;
+}
+#footer {
+  margin-top: 25px;
+  text-align: center;
+}
+#footer p {
+  text-align: center;
+  font-size: 13px;
+}
+
+.people {
+  padding-top: 1px;
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+  .figure {
+    width: 25%;
+    margin: 10px;
+  }
+  .figure img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 4%;
+  }
+  div.people.clearfix {
+    width: 100%;
+    left: 20px;
+  }
+}
+@media screen and (min-width: 601px) {
+  body {
+    background-color: #e6e6e6;
+    }
+  .nav li {
+    display: block;
+  }
+
+  .nav {
+    float: left;
+    width: 25%;
+    margin-top: 225px;
+  }
+
+  .main {
+    float: right;
+    width: 70%
+  }
+
+  #header {
+    display: none;
+  }
+
+  #logo {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+  }
+
+  #head {
+    position: absolute;
+    display: block;
+    top: 70px;
+    background-color: #e6e6e6;
+    width: 221px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .stack-logo {
+    position: relative;
+  }
+
 }
